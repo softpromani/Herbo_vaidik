@@ -956,17 +956,20 @@
                 <h5>blog</h5>
             </div>
             <div class="row">
+                @foreach ($blogs as $blog)
+                    
+                
                 <div class="col-lg-4 col-md-6">
                     <div class="pa-blog-box">
-                        <img src="https://via.placeholder.com/348x250" alt="image" class="img-fluid">
+                        <img src="{{asset('Blog/'.$blog->image)}}" alt="image" class="img-fluid" style="height:250px; width:348px;">
                         <div class="pa-blog-title">
-                            <a href="#" class="pa-blog-category">Ayurveda Medicine</a>
-                            <h2><a href="blog-single.html">Duis aute irure dolor in velit voluptate esse</a></h2>
-                            <a href="#" class="pa-blog-date">20 March, 2020</a>
+                            <a href="{{url('/blog-show/'.$blog->slug)}}" class="pa-blog-category">{{$blog->title}}</a>
+                            <h2><a href="{{url('/blog-show/'.$blog->slug)}}">{{$blog->sort_desc}}</a></h2>
+                            <a href="#" class="pa-blog-date">{{$blog->created_at->diffForHumans()}}</a>
                         </div>
                         <div class="pa-blog-view">
                             <ul>
-                                <li>
+                                {{-- <li>
                                     <a href="#"><i class="far fa-heart"></i> 900</a>
                                 </li>
                                 <li>
@@ -974,57 +977,13 @@
                                 </li>
                                 <li>
                                     <a href="#"><i class="fas fa-share-alt"></i> Share</a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="pa-blog-box">
-                        <img src="https://via.placeholder.com/348x250" alt="image" class="img-fluid">
-                        <div class="pa-blog-title">
-                            <a href="#" class="pa-blog-category">Ayurveda Medicine</a>
-                            <h2><a href="blog-single.html">Duis aute irure dolor in velit voluptate esse</a></h2>
-                            <a href="#" class="pa-blog-date">20 March, 2020</a>
-                        </div>
-                        <div class="pa-blog-view">
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="far fa-heart"></i> 900</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fas fa-eye"></i> 830</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fas fa-share-alt"></i> Share</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="pa-blog-box">
-                        <img src="https://via.placeholder.com/348x250" alt="image" class="img-fluid">
-                        <div class="pa-blog-title">
-                            <a href="#" class="pa-blog-category">Ayurveda Medicine</a>
-                            <h2><a href="blog-single.html">Duis aute irure dolor in velit voluptate esse</a></h2>
-                            <a href="#" class="pa-blog-date">20 March, 2020</a>
-                        </div>
-                        <div class="pa-blog-view">
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="far fa-heart"></i> 900</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fas fa-eye"></i> 830</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fas fa-share-alt"></i> Share</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+               
+                @endforeach
             </div>
         </div>
     </div>
