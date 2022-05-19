@@ -766,8 +766,9 @@ p.pa-product-rating {
 /* breadcrumb start */
 .pa-breadcrumb {
     padding: 91px 0 93px;
-    background: linear-gradient(45deg,rgba(0, 0, 0, 0.56),rgba(0, 0, 0, 0.56) ), url(https://via.placeholder.com/1920x260);
-    background-size: cover;
+    background: linear-gradient(45deg,rgba(0, 0, 0, 0.56),rgba(0, 0, 0, 0.56) ), url('../images/AyurvedaHistory.jpg');
+    background-size:contain;
+    
 }
 .pa-breadcrumb-box {
     text-align: center;
