@@ -47,7 +47,7 @@ class BlogController extends Controller
         ]);
 
         $newpic='Blog-'.rand(0,99).'-'.rand(0,99).'-'.time().'.'.$req->blogpic->extension();
-        if($req->blogpic->move(public_path('Blog'),$newpic))
+        if($req->blogpic->move(public_path('Blogs'),$newpic))
     	 {
             $res=Blog::create([
                 // 'user_id'=>Auth::user()->id,
