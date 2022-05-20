@@ -27,7 +27,7 @@
                             </td>
                             <td>{{$blog->title}}</td>
                             <td>{{$blog->sort_desc}}</td>
-                            <td><img class="me-75 img-thumbnail" style="height:150px;width:150px;" src="{{asset('Blog/'.$blog->image)}}"></td>
+                            <td><img class="me-75 img-thumbnail" style="height:150px;width:150px;" src="{{asset('Blogs/'.$blog->image)}}"></td>
                             <td>
                                 <div class="dropdown">
                                 <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0 waves-effect waves-float waves-light" data-bs-toggle="dropdown" aria-expanded="true">
