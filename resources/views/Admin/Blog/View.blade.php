@@ -62,4 +62,7 @@
 
 <script src="{{asset('BackEnd/assets/js/scripts/tables/table-datatables-advanced.js')}}"></script>
 <link rel="stylesheet" type="text/css" href="{{asset('BackEnd/assets/css/plugins/forms/pickers/form-flat-pickr.css')}}">
+ <!-- BEGIN: Vendor JS-->
+ <script src="{{asset('BackEnd/assets/vendors/js/vendors.min.js')}}"></script>
+ <!-- BEGIN Vendor JS-->
 @endsection
