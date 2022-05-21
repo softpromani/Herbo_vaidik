@@ -28,7 +28,7 @@
         <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon" data-feather="search"></i></a>
           <div class="search-input">
             <div class="search-input-icon"><i data-feather="search"></i></div>
-            <input class="form-control input" type="text" placeholder="Search Herbo Vaidik " tabindex="-1" data-search="search">
+            <input class="form-control input" type="text" placeholder="Search Herbo Vedik " tabindex="-1" data-search="search">
             <div class="search-input-close"><i data-feather="x"></i></div>
             <ul class="search-list search-list-main"></ul>
           </div>
@@ -173,9 +173,13 @@
           </ul>
         </li>
         <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder">Herbo Vaidik</span><span class="user-status">Admin</span></div><span class="avatar"><img class="round" src="{{asset('BackEnd/assets/images/portrait/small/avatar-s-11.jpg')}}" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span></a>
+            <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder">Herbo Vedik</span><span class="user-status">Admin</span></div><span class="avatar"><img class="round" src="{{asset('BackEnd/assets/images/portrait/small/avatar-s-11.jpg')}}" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span></a>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user"><a class="dropdown-item" href="page-profile.html"><i class="me-50" data-feather="user"></i> Profile</a>{{--<a class="dropdown-item" href="#"><i class="me-50" data-feather="mail"></i> Inbox</a><a class="dropdown-item" href="app-todo.html"><i class="me-50" data-feather="check-square"></i> Task</a>--}}<a class="dropdown-item" href="app-chat.html"><i class="me-50" data-feather="message-square"></i> Chats</a>
-            <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="me-50" data-feather="settings"></i> Settings</a>{{--<a class="dropdown-item" href="page-pricing.html"><i class="me-50" data-feather="credit-card"></i> Pricing</a><a class="dropdown-item" href="page-faq.html"><i class="me-50" data-feather="help-circle"></i> FAQ</a>--}}<a class="dropdown-item" href="#"><i class="me-50" data-feather="power"></i> Logout</a>
+            <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="me-50" data-feather="settings"></i> Settings</a>{{--<a class="dropdown-item" href="page-pricing.html"><i class="me-50" data-feather="credit-card"></i> Pricing</a><a class="dropdown-item" href="page-faq.html"><i class="me-50" data-feather="help-circle"></i> FAQ</a>--}}
+            <form method="POST" action='{{route('logout')}}' id="my_form">
+              @csrf
+            <a class="dropdown-item" onclick="document.getElementById('my_form').submit();"><i class="me-50" data-feather="power"></i> Logout</a>
+            </form>
           </div>
         </li>
       </ul>

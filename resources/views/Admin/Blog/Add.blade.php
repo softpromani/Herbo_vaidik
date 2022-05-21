@@ -1,10 +1,10 @@
 @extends('Layouts.back_end.adminlayout')
 @section('Content-Area')
 
-<form  id="dpz-btn-select-files" class="" novalidate="novalidate" action="{{isset($blog) ?route('admin.Blog.edit',$blog->id):route('admin.Blog.store')}}" method="post" enctype="multipart/form-data" name="myForm">
+<form  id="dpz-btn-select-files" class="" novalidate="novalidate" action="{{isset($blog) ?route('admin.Blog.update',$blog->id):route('admin.Blog.store')}}" method="post" enctype="multipart/form-data" name="myForm">
     @csrf
     @if(isset($blog))
-        @method('PUT')
+        @method('PATCH')
     @endif    
 
     <div class="row match-height">
@@ -26,15 +26,15 @@
                     
                 </div>
                 <div class="mb-2">
-                    <label class="form-label">Sort Description</label>
-                    <input type="text" class="form-control @error('sort_desc') is-invalid @enderror" name='sort_desc' value="{{isset($sort_desc) ? $blog->sort_desc:''}}">
+                    <label class="form-label">Short Description</label>
+                    <input type="text" class="form-control @error('sort_desc') is-invalid @enderror" name='sort_desc' value="{{isset($blog) ? $blog->sort_desc:''}}">
                     @error('sort_desc')
                     <span id="basic-default-name-error" class="error text-danger">{{$message}}</span>
                     @enderror
                 </div>
                 <div class="mb-2">
-                    <label class="form-label">For URL </label>
-                    <input type="text" class="form-control @error('url') is-invalid @enderror" name='url' value="{{isset($url) ? $blog->url:''}}">
+                    <label class="form-label">Form URL </label>
+                    <input type="text" class="form-control @error('url') is-invalid @enderror" name='url' value="{{isset($blog) ? $blog->slug:''}}">
                     @error('url')
                     <span id="basic-default-name-error" class="error text-danger">{{$message}}</span>
                     @enderror
@@ -42,7 +42,7 @@
 
                 <div class="mb-2">
                     <label class="form-label">Meta Description </label>
-                    <input type="text" class="form-control @error('meta_desc') is-invalid @enderror" name='meta_desc' value="{{isset($meta_desc) ? $blog->meta_desc:''}}">
+                    <input type="text" class="form-control @error('meta_desc') is-invalid @enderror" name='meta_desc' value="{{isset($blog) ? $blog->meta_desc:''}}">
                     @error('meta_desc')
                     <span id="basic-default-name-error" class="error text-danger">{{$message}}</span>
                     @enderror
@@ -50,7 +50,7 @@
 
                 <div class="mb-2">
                     <label class="form-label">Meta Keywords </label>
-                    <input type="text" class="form-control @error('meta_keyword') is-invalid @enderror" name='meta_keyword' value="{{isset($meta_keyword) ? $blog->meta_keyword:''}}">
+                    <input type="text" class="form-control @error('meta_keyword') is-invalid @enderror" name='meta_keyword' value="{{isset($blog) ? $blog->meta_keyword:''}}">
                     @error('meta_keyword')
                     <span id="basic-default-name-error" class="error text-danger">{{$message}}</span>
                     @enderror
@@ -69,7 +69,7 @@
                     <i data-feather="file"></i> Click me to select files
                
                 <div class="container dropzone dropzone-area" >
-                    <img id="preview-image-before-upload" class="img-fluid m-auto mt-2"  src="{{isset($blogpic) ? $blog->blogpic:''}}">
+                    <img id="preview-image-before-upload" class="img-fluid m-auto mt-2"  src="{{isset($blog) ? asset('Blogs/'.$blog->image):''}}">
                     @error('blogpic')
                     <span id="basic-default-name-error" class="error text-danger">{{$message}}</span>
                     @enderror
@@ -89,7 +89,7 @@
                 <div class="card-body ">
                     <div id="toolbar"></div>
                     <div id="editor"  class='editor' style="min-height: 350px;">
-                        {{isset($blog) ? $blog->title:''}}
+                        {!! isset($blog) ? $blog->long_desc:'' !!}
                     </div>
                 </div>
             </div>

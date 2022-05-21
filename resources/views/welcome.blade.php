@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herbo Vaidik - Responsive HTML Template</title>
+    <title>Herbo Vedik - Responsive HTML Template</title>
     <link rel="stylesheet" href="{{asset('FrontEnd/assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('FrontEnd/assets/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('FrontEnd/assets/css/font.css')}}">
@@ -48,7 +48,7 @@
                 <div class="col-md-3 col-6">
                     <div class="pa-logo">
                         {{-- <a href="#"><img src="{{asset('FrontEnd/assets/images/Herbologo.svg')}}" alt="image" class="img-fluid"/></a> --}}
-                   <a><h3 class="text-light" style="font-family: ui-monospace; font-weight:bold"><img src="{{asset('FrontEnd/assets/images/Herbalwhite.svg')}}" alt="image" class="img-fluid"/> &nbsp;&nbsp;Herbo Vaidik</h3></a>
+                   <a><h3 class="text-light" style="font-family: ui-monospace; font-weight:bold"><img src="{{asset('FrontEnd/assets/images/Herbalwhite.svg')}}" alt="image" class="img-fluid"/> &nbsp;&nbsp;Herbo Vedik</h3></a>
                     </div>
                 </div>
                 <div class="col-md-9 col-6">
@@ -136,7 +136,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-6">
                     <div class="pa-banner-text">
-                        <h4 class="pa-banner-category" style="  color: white;text-shadow: 2px 2px 4px #000000;">Herbo Vaidik</h4>
+                        <h4 class="pa-banner-category" style="  color: white;text-shadow: 2px 2px 4px #000000;">Herbo Vedik</h4>
                         <h2 style="  color: white;text-shadow: 2px 2px 4px #000000;">New Age Health Solutions Formulated With Ayurvedic Expertise</h2>
                         <p style=" font-size:20px; color: #2C5E1A;text-shadow: 2px 2px 3px #ffff;">Ayurvedic medicine (“Ayurveda” for short) is one of the world's oldest holistic (“whole-body”) healing systems. It was developed more than 3,000 years ago in India.</p>
                         <a href="javascript:;"  style="color:#fff;background-color:#2C5E1A;" class="btn pa-view-all">view all</a>
@@ -154,7 +154,7 @@
                     <div class="pa-medicine-box">
                         <img src="{{asset('FrontEnd/assets/images/290x230.webp')}}" alt="image" class="img-fluid" style="height:230px;width:290px;"/>
                         <h2><a href="#">Herbal medicine</a></h2>
-                        <a href="#">Herbo Vaidik</a>
+                        <a href="#">Herbo Vedik</a>
                         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris aliquip </p>
                     </div>
                 </div>
@@ -184,7 +184,7 @@
         <div class="container">
             <div class="pa-heading">
                 <img src="{{asset('FrontEnd/assets/images/herbal.svg')}}" alt="image" class="img-fluid"/>
-                <h1>why Herbo Vaidik</h1>
+                <h1>why Herbo Vedik</h1>
                 <h5>best for you</h5>
             </div>
             <div class="row">
@@ -1040,7 +1040,7 @@
                     <div class="pa-foot-box pa-foot-subscribe">
                         <div style="display: inline-flex">
                         <img src="{{asset('FrontEnd/assets/images/herbal.svg')}}" alt="image" class="img-fluid"/>
-                        <h3 style="color:#FBBB04"><br/> &nbsp; Herbo Vaidik</h3>
+                        <h3 style="color:#FBBB04"><br/> &nbsp; Herbo Vedik</h3>
                         </div>
                         <div class="pa-newsletter">
                             <form>
@@ -1058,7 +1058,7 @@
     <!-- copyright start -->
     <div class="pa-copyright">
         <div class="container">
-            <p>Copyright &copy; 2020. All right reserved. <a href="index.html">Herbo Vaidik</a></p>
+            <p>Copyright &copy; 2020. All right reserved. <a href="index.html">Herbo Vedik</a></p>
         </div>
     </div>
     <!-- copyright end -->

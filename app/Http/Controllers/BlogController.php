@@ -5,15 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
        return view('Admin.Blog.Add');
@@ -77,17 +78,29 @@ class BlogController extends Controller
         
     }
 
+
+
+
+    public function destroy($blog)
+    {
+       // return $blog;
+       $id=Crypt::decrypt($blog);
+       Blog::find($id)->delete();
+       Session()->flash('success','Blog Deleted Successfully');
+       return redirect()->back();
+    }
+
     /**
      * Display the specified resource.
      *
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
-    {
+    // public function show(Blog $blog)
+    // {
        
-        //return $blog;
-    }
+    //     return $blog;
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -95,9 +108,10 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blog $blog)
+    public function edit($id)
     {
-        //
+        $blog=Blog::find($id);
+        return view('Admin.Blog.Add',['blog'=>$blog]);
     }
 
     /**
@@ -118,8 +132,6 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blog $blog)
-    {
-        //
-    }
+
+ 
 }

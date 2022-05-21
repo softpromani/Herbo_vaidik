@@ -50,7 +50,7 @@
                     <div class="pa-foot-box pa-foot-subscribe">
                         <div style="display: inline-flex">
                         <img src="{{asset('FrontEnd/assets/images/herbal.svg')}}" alt="image" class="img-fluid"/>
-                        <h3 style="color:#FBBB04"><br/> &nbsp; Herbo Vaidik</h3>
+                        <h3 style="color:#FBBB04"><br/> &nbsp; Herbo Vedik</h3>
                         </div>
                         <div class="pa-newsletter">
                             <form>
@@ -68,7 +68,7 @@
     <!-- copyright start -->
     <div class="pa-copyright">
         <div class="container">
-            <p>Copyright &copy; 2020. All right reserved. <a href="index.html">Herbo Vaidik</a></p>
+            <p>Copyright &copy; 2020. All right reserved. <a href="index.html">Herbo Vedik</a></p>
         </div>
     </div>
     <!-- copyright end -->

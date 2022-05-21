@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/Blog/{slug?}',[FrontEndBlogController::class,'showblog'])->name('singleBlog');
 
-
+// Route::get()
 
 
 

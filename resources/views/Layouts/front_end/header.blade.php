@@ -23,7 +23,7 @@
             <div class="col-md-3 col-6">
                 <div class="pa-logo">
                     {{-- <a href="#"><img src="{{asset('FrontEnd/assets/images/Herbologo.svg')}}" alt="image" class="img-fluid"/></a> --}}
-               <a><h3 class="text-light" style="font-family: ui-monospace; font-weight:bold"><img src="{{asset('FrontEnd/assets/images/Herbalwhite.svg')}}" alt="image" class="img-fluid"/> &nbsp;&nbsp;Herbo Vaidik</h3></a>
+               <a><h3 class="text-light" style="font-family: ui-monospace; font-weight:bold"><img src="{{asset('FrontEnd/assets/images/Herbalwhite.svg')}}" alt="image" class="img-fluid"/> &nbsp;&nbsp;Herbo Vedik</h3></a>
                 </div>
             </div>
             <div class="col-md-9 col-6">
