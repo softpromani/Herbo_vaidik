@@ -98,7 +98,11 @@
     </div>
     <div class="row">
         <div class="col-sm-12 d-grid gap-2">
+            @if (isset($blog))
+            <input type="button" class="btn btn-info btn-lg btn-block" value="Update Blog" id="btn-submit">
+           @else
             <input type="button" class="btn btn-info btn-lg btn-block" value="Add New Blog" id="btn-submit">
+            @endif
         </div>
     </div>
    

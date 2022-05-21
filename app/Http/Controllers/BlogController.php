@@ -123,7 +123,8 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        Session()->flash('error','Update not working Server Error');
+        return redirect()->back();
     }
 
     /**
