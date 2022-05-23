@@ -28,7 +28,7 @@
                     @foreach ($blogs as $blog)
                     <div class="col-md-6">
                         <div class="pa-blog-box">
-                            <img src="{{asset('blogs/'.$blog->image)}}" alt="image"  style="height:250px; width:348px;" class="img-fluid">
+                            <a href="{{route('singleBlog',$blog->slug)}}"><img src="{{asset('Blogs/'.$blog->image)}}" alt="image"  style="height:250px; width:348px;" class="img-fluid"></a>
                             <div class="pa-blog-title">
                                 <a href="{{route('singleBlog',$blog->slug)}}" class="pa-blog-category">{{$blog->title}}</a>
                                 <h2><a href="#">{{$blog->sort_desc}}</a></h2>

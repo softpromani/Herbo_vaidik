@@ -121,9 +121,34 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(Request $req,$blog)
     {
-        Session()->flash('error','Update not working Server Error');
+        $req->validate([
+            'title'=>'required',
+            'sort_desc'=>'required',
+            'blogpic'=>'nullable|image',
+            'long_desc'=>'nullable',
+        ]);
+        $blogdt=Blog::find($blog);
+        $blogdt->update([
+            'user_id'=>1,
+            'title'=>$req->title,
+            'sort_desc'=>$req->sort_desc,
+            'slug'=>Str::slug($req->url),
+            'meta_desc'=>$req->meta_desc,
+            'meta_keyword'=>$req->meta_keyword,
+            'long_desc'=>$req->long_desc,
+        ]);
+        if($req->hasFile('blogpic'))
+        {
+            $newpic='Blog-'.rand(0,99).'-'.rand(0,99).'-'.time().'.'.$req->blogpic->extension();
+            $req->blogpic->move(public_path('Blogs'),$newpic);
+            $blogdt->update([
+                'image'=>$newpic
+            ]);
+        }
+
+        Session()->flash('success','Update not working Server Error');
         return redirect()->back();
     }
 

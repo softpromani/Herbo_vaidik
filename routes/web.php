@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FrontEnd\BlogController as FrontEndBlogController;
+use App\Http\Controllers\FrontEnd\ContactUsController;
 use App\Http\Controllers\HomeController;
 use App\Models\Blog;
 
@@ -17,7 +18,10 @@ Route::get('/', function () {
 
 Route::get('/Blog/{slug?}',[FrontEndBlogController::class,'showblog'])->name('singleBlog');
 
-// Route::get()
+// Contact us frontend
+Route::get('/contact-us',[ContactUsController::class,'index']);
+Route::get('/enquiry-us',[ContactUsController::class,'index']);
+Route::post('/contact',[ContactUsController::class,'contact']);
 
 
 

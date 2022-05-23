@@ -22,15 +22,15 @@
         <div class="row">
             <div class="col-md-3 col-6">
                 <div class="pa-logo">
-                    {{-- <a href="#"><img src="{{asset('FrontEnd/assets/images/Herbologo.svg')}}" alt="image" class="img-fluid"/></a> --}}
-               <a><h3 class="text-light" style="font-family: ui-monospace; font-weight:bold"><img src="{{asset('FrontEnd/assets/images/Herbalwhite.svg')}}" alt="image" class="img-fluid"/> &nbsp;&nbsp;Herbo Vedik</h3></a>
+                     <a href="#"><img src="{{asset('FrontEnd/assets/images/herboVedik.png')}}" alt="image" class="img-fluid"/></a> 
+               {{-- <a><h3 class="text-light" style="font-family: ui-monospace; font-weight:bold"><img src="{{asset('FrontEnd/assets/images/Herbalwhite.svg')}}" alt="image" class="img-fluid"/> &nbsp;&nbsp;Herbo Vedik</h3></a> --}}
                 </div>
             </div>
             <div class="col-md-9 col-6">
                 <div class="pa-nav-bar">
                     <div class="pa-menu">
                         <ul>
-                            <li class="pa-menu-child"><a href="javascript:;">Home</a>
+                            <li class="pa-menu-child"><a href="{{url('/')}}">Home</a>
                                 {{-- <ul class="pa-submenu">
                                     <li>
                                         <a href="index.html">Home1</a>
@@ -43,10 +43,10 @@
                                     </li>
                                 </ul> --}}
                             </li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="#">About</a></li>
                             {{-- <li><a href="shop.html">Shop</a></li>
                             <li><a href="service.html">Services</a></li> --}}
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="{{url('/Blog')}}">Blog</a></li>
                             {{-- <li class="pa-menu-child"><a href="Javascript:;">pages</a>
                                 <ul class="pa-submenu">
                                     <li>

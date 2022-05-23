@@ -37,5 +37,6 @@
 </div>
 <!-- main wrapper end -->
 @include('Layouts.front_end.foot')
+@section('Script_Area')
 </body>
 </html>

@@ -33,7 +33,7 @@
                     <div class="pa-blog-title">
                         <a href="#" class="pa-blog-category">{{$blog->title}}</a>
                         <h2></h2>
-                        <a href="#" class="pa-blog-date">{{$blog->created_at}}</a>
+                        {{-- <a href="#" class="pa-blog-date">{{$blog->created_at}}</a> --}}
                         {{ $blog->sort_desc}}
                     </div>
                     <div class="pa-blog-view">

@@ -2674,6 +2674,8 @@ ul.pa-submenu-two {
     .pa-top-header {
         margin: 5px 0;
         height: auto;
+      /*  display: none;*/
+
     }   
     .pa-banner {
         padding: 68px 0px 53px;
@@ -2952,4 +2954,5 @@ ul.pa-submenu-two {
         display: block;
     }
 }
+
 /* responsive end */

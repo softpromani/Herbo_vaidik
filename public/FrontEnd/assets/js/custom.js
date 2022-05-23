@@ -238,7 +238,7 @@ $(".submitForm").on('click', function() {
         formDetail.append('form_type' , _this.attr('form-type'));
         $.ajax({
             method : 'post',
-            url : 'ajaxmail.php',
+            url : '/contact',
             data:formDetail,
             cache:false,
             contentType: false,
@@ -250,7 +250,9 @@ $(".submitForm").on('click', function() {
                 targetForm.find('textarea').val('');
                 errroTarget.html('<p style="color:green;">Mail has been sent successfully.</p>');
             }else{
+               // alert(resp);
                 errroTarget.html('<p style="color:red;">Something went wrong please try again latter.</p>');
+               //errroTarget.text(resp.name);
             }
         });
     }
